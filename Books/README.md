@@ -9,3 +9,7 @@
 # SQL
 1. HeadFirst - SQL
 
+# Data Structures & Algorithms
+1. Robert Lafore - Data Structures & Algorithms in Java
+
+
