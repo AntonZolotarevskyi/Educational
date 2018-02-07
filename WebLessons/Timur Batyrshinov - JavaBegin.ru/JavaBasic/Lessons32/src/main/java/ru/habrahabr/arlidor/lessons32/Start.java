@@ -3,14 +3,19 @@ package ru.habrahabr.arlidor.lessons32;
 import java.util.ArrayDeque;
 import java.util.Collections;
 import java.util.Deque;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.Map;
 import java.util.Queue;
 import java.util.Stack;
+import java.util.TreeMap;
 
 public class Start {
 
     public static void main(String args[]) {
 
-        Deque<Car> cars = new ArrayDeque<>();
+        HashMap<String, Car> cars = new HashMap<>();
 
         Car car1 = new Car(1999, "BMW");
         Car car2 = new Car(1990, "Opel");
@@ -19,36 +24,41 @@ public class Start {
         Car car5 = new Car(2013, "KIA");
         Car car6 = new Car(2013, "Lexus");
 
-        cars.add(car1);
-        cars.add(car2);
-        cars.add(car3);
-        cars.add(car4);
-        cars.add(car5);
-        cars.add(car6);
+        cars.put("test", car1);
+        cars.put("key", car2);
+        cars.put("niva", car3);
+        cars.put("car", car4);
+        cars.put("test", car5);
+        cars.put("test2", car6);
+        iterateMap(cars);
 
-        System.out.println("ArrayDeque.element() = " + cars.element());
-        System.out.println("ArrayDeque.remove() = " + cars.remove());
-        Queue lifoQueue = Collections.asLifoQueue(cars);
-        lifoQueue.add(car1);
-        lifoQueue.add(car2);
-        lifoQueue.add(car3);
-        lifoQueue.add(car4);
-        lifoQueue.add(car5);
-        lifoQueue.add(car6);
-        System.out.println("lifoQueue.element() = " + lifoQueue.element());
-        System.out.println("lifoQueue.remove() = " + lifoQueue.remove());
+        TreeMap<String, Car> treeMap = new TreeMap<>();
+        treeMap.put("test", car1);
+        treeMap.put("key", car2);
+        treeMap.put("niva", car3);
+        treeMap.put("car", car4);
+        treeMap.put("test", car5);
+        treeMap.put("test2", car6);
+        iterateMap(treeMap);
 
-        Stack<Car> stack = new Stack();
-        stack.add(car1);
-        stack.add(car2);
-        stack.add(car3);
-        stack.add(car4);
-        stack.add(car5);
-        stack.add(car6);
+        LinkedHashMap<String, Car> linkedMap = new LinkedHashMap<>();
 
-        System.out.println("stack.peek() = " + stack.peek());
-        System.out.println("lifoQueue.pop() = " + stack.pop());
-        System.out.println("lifoQueue.pop() = " + stack.pop());
+        linkedMap.put("test", car1);
+        linkedMap.put("key", car2);
+        linkedMap.put("niva", car3);
+        linkedMap.put("car", car4);
+        linkedMap.put("test", car5);
+        linkedMap.put("test2", car6);
+        iterateMap(linkedMap);
+    }
+
+    private static void iterateMap(Map<String, Car> cars) {
+        System.out.println();
+        Iterator<Map.Entry<String, Car>> iterator = cars.entrySet().iterator();
+        while (iterator.hasNext()) {
+            Map.Entry<String, Car> carEntry = iterator.next();
+            System.out.println(carEntry.getKey() + " - " + carEntry.getValue());
+        }
     }
 
 }
