@@ -5,3 +5,4 @@
 4. OOP basic
 5. Main programming principle
 6. Project`s structure
+7. Classes and packages
