@@ -7,4 +7,4 @@
 6. Project`s structure
 7. Classes and packages
 8. Object`s properties
-9. 
+9. Object`s methods
