@@ -8,3 +8,6 @@
 7. Classes and packages
 8. Object`s properties
 9. Object`s methods
+10. Keywords in Java
+11. Access modifiers
+12. Encapsulation
