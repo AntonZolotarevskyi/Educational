@@ -13,5 +13,10 @@
 12. Encapsulation
 13. Variable types
 14. Sum up 1
-15. Constructor
-16. 
+15. Constructors
+16. Exercise 1. Shop for sale of equipment - Theory
+17. Types of method return values
+18. Packages
+19. Exercise 2. Shop for sale of equipment - Practice
+20. Inheritance
+21. 
