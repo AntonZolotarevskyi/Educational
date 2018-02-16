@@ -18,5 +18,5 @@
 17. Types of method return values
 18. Packages
 19. Exercise 2. Shop for sale of equipment - Practice
-20. Inheritance
-21. 
+20-22. Inheritance
+23. 
