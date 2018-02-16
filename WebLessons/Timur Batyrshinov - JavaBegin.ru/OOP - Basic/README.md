@@ -12,3 +12,6 @@
 11. Access modifiers
 12. Encapsulation
 13. Variable types
+14. Sum up 1
+15. Constructor
+16. 
